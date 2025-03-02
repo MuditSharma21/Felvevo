@@ -2,7 +2,7 @@ import { TabsContent } from "@/components/ui/tabs"
 import { Bot, FileTextIcon, Pencil, StarsIcon } from "lucide-react"
 
 export const AiTools = ({
-    plan, trial, videoId
+    
 }: {
     plan: 'PREMIUM' | 'FREE'
     trial: boolean

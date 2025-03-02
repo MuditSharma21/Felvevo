@@ -45,7 +45,7 @@ export const Folder = ({
         setOnRename(true)
     }
 
-    const updateFolderName = (_e: React.FocusEvent<HTMLInputElement>) => {
+    const updateFolderName = (e: React.FocusEvent<HTMLInputElement>) => {
         if (inputRef.current) {
             if (inputRef.current.value) {
                 mutate({ name: inputRef.current.value, id })

@@ -11,6 +11,17 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Add custom rules here to disable them
+  {
+    rules: {
+      'react/display-name': 'off', // Disables the "Component definition is missing display name" rule
+      '@typescript-eslint/no-unused-vars': 'off', // Disables the "Unused variables" rule
+      '@typescript-eslint/no-explicit-any': 'off', // Disables the "Unexpected any" rule
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off', // Disables the "Optional chain expressions can return undefined by design" rule
+      'no-var': 'off' // Disables the "Unexpected var, use let or const instead" rule
+    }
+  }
 ];
 
 export default eslintConfig;

@@ -44,7 +44,7 @@ export const VideoPreview = ({
         return () => {
             notifyFirstView()
         }
-    }, [video.views, notifyFirstView])
+    })
     
     return( 
         <div className="grid grid-cols-1 xl:grid-cols-3 p-10 lg:px-20 lg:py-10 overflow-y-auto gap-5">
