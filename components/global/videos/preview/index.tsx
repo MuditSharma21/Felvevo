@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation"
 import { CopyLink } from "../copy-link"
 import { RichLink } from "../rich-link"
 import { truncateString } from "@/lib/utils"
-import { Download } from "lucide-react"
 import { TabMenu } from "../../tabs"
 import { AiTools } from "../../ai-tools"
 import { VideoTranscript } from "../../video-transcript"
@@ -45,7 +44,7 @@ export const VideoPreview = ({
         return () => {
             notifyFirstView()
         }
-    }, [])
+    }, [video.views, notifyFirstView])
     
     return( 
         <div className="grid grid-cols-1 xl:grid-cols-3 p-10 lg:px-20 lg:py-10 overflow-y-auto gap-5">

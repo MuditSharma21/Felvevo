@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { useMoveVideos } from "@/hooks/useMoveVideos"
 
 export const ChangeVideoLocation = ({
-    videoId, currentWorkspace, currentFolder, currentFolderName
+    videoId, currentWorkspace, currentFolder
 }: {
     videoId: string
     currentWorkspace?: string

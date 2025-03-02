@@ -1,4 +1,4 @@
-import { deleteFolder, deleteWorkspace } from "@/actions/workspace"
+import { deleteWorkspace } from "@/actions/workspace"
 import { Modal } from "@/components/modal"
 import { Button } from "@/components/ui/button"
 import { Trash2 } from "lucide-react"

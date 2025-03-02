@@ -1,5 +1,5 @@
 import { getUserNotifications, onAuthenticateUser } from "@/actions/user";
-import { getAllUserVideos, getUserWorkspaces, getWorkspaceFolders, verifyAccessToWorkspace } from "@/actions/workspace";
+import { getUserWorkspaces, verifyAccessToWorkspace } from "@/actions/workspace";
 import { redirect } from "next/navigation";
 import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query'
 import { Sidebar } from "@/components/global/sidebar";

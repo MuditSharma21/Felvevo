@@ -1,10 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { TabsContent } from "@/components/ui/tabs"
-import Loader from "../loader/loader"
-import { isPending } from "@reduxjs/toolkit"
-import VideoRecorderDuotone from "@/components/icons/video-recorder-duotone"
-import { FileDuoToneBlack } from "@/components/icons"
-import { Bot, DownloadIcon, FileTextIcon, Pencil, StarsIcon } from "lucide-react"
+import { Bot, FileTextIcon, Pencil, StarsIcon } from "lucide-react"
 
 export const AiTools = ({
     plan, trial, videoId

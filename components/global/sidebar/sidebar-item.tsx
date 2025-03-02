@@ -3,7 +3,7 @@ import Link from "next/link"
 
 
 export const SideBarItem = ({
-    icon, title, href, selected, notifications
+    icon, title, href, selected
 }: {
     icon: React.ReactNode
     title: string

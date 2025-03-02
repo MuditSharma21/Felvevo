@@ -8,7 +8,7 @@ export const EditVideoForm = ({
     title: string
     description: string
 }) => {
-    const { register, onFormSubmit, errors, isPending } = useEditVideo(
+    const { register, onFormSubmit, errors } = useEditVideo(
         videoId,
         title,
         description

@@ -3,11 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Skeleton } from "@/components/ui/skeleton"
-import { useMutationData } from "@/hooks/useMutationData"
 import { useSearch } from "@/hooks/useSearch"
-import Loader from "../loader/loader"
 import { useRouter } from "next/navigation" // For navigation
-import { Folder, Video } from "lucide-react"
 import { useState } from "react"
 
 export const ItemSearch = ({

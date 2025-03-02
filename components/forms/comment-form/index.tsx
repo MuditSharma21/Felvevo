@@ -4,10 +4,10 @@ import { FormGenerator } from "@/components/global/form-generator"
 import Loader from "@/components/global/loader/loader"
 import { Button } from "@/components/ui/button"
 import { useVideoComment } from "@/hooks/useVideoComment"
-import { Send, X } from "lucide-react"
+import { Send } from "lucide-react"
 
 export const CommentForm = ({
-    author, videoId, commentId, close
+    author, videoId, commentId
 }: {
     author: string
     videoId: string

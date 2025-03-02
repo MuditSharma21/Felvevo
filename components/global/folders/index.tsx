@@ -2,7 +2,6 @@
 
 import FolderDuotone from "@/components/icons/folder-duotone"
 import { cn } from "@/lib/utils"
-import { ArrowRight } from "lucide-react"
 import { Folder } from "./folder"
 import { useQueryData } from "@/hooks/useQueryData"
 import { getWorkspaceFolders } from "@/actions/workspace"

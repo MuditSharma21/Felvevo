@@ -21,7 +21,7 @@ export const VideoUpload = ({ folderId, workspaceId }: { workspaceId: string; fo
       await videoUpload(formData, workspaceId, folderId);
   
       toast('File uploaded successfully.');
-    } catch (error: any) {
+    } catch (error) {
         console.error("Upload failed", error);
         toast('Error uploading file. Please try again.');
     } finally {
@@ -37,7 +37,7 @@ export const VideoUpload = ({ folderId, workspaceId }: { workspaceId: string; fo
             e.preventDefault();
             setFileEnter(true);
           }}
-          onDragLeave={(e) => {
+          onDragLeave={(_e) => {
             setFileEnter(false);
           }}
           onDragEnd={(e) => {

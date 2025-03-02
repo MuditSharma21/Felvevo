@@ -4,7 +4,7 @@ import { CardMenu } from "./card-menu"
 import { CopyLink } from "./copy-link"
 import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Dot, Share2, User } from "lucide-react"
+import { Share2, User } from "lucide-react"
 import { DeleteVideo } from "./delete"
 
 type VideoCardProps = {
@@ -93,7 +93,7 @@ export const VideoCard = (
                                     className="text-[#9D9D9D]"
                                 />
                                 <p className="text-xs text-[#9D9D9D] capitalize">
-                                    {props.User?.firstname}'s Workspace
+                                    {props.User?.firstname}&apos;s Workspace
                                 </p>
                             </span>
                         </div>

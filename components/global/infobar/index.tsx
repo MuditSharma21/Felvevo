@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { UserButton } from "@clerk/nextjs"
 import { Search, UploadIcon } from "lucide-react"
 import { ItemSearch } from "../search-items"
-import Link from "next/link"
 import { VideoUpload } from "../video-upload"
 
 export const InfoBar = ({

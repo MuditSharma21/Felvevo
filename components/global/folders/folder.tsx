@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"
 import Loader from "../loader/loader"
-import FolderDuotone from "@/components/icons/folder-duotone"
 import React, { useRef, useState } from "react"
 import { useMutationData, useMutationDataState } from "@/hooks/useMutationData"
 import { renameFolders } from "@/actions/workspace"
@@ -46,7 +45,7 @@ export const Folder = ({
         setOnRename(true)
     }
 
-    const updateFolderName = (e: React.FocusEvent<HTMLInputElement>) => {
+    const updateFolderName = (_e: React.FocusEvent<HTMLInputElement>) => {
         if (inputRef.current) {
             if (inputRef.current.value) {
                 mutate({ name: inputRef.current.value, id })
