@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest, { params }:  { params: { id: string } }) {
     try {
         // console.log('Endpoint hit✅');
-        const { id } = await params
+        const { id } = params
         const userProfile = await db.user.findUnique({
             where: {
                 clerkid: id
