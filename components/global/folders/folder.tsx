@@ -81,7 +81,7 @@ export const Folder = ({
                 <span className="text-sm text-neutral-500">{count || 0} videos</span>
             </div>
         </Loader>
-        <div className="flex items-center">
+        <div className="flex items-center z-50">
             {/* <FolderDuotone/>  */}
             <DeleteFolder folderId={id} workspaceId={workspaceId} className="text-[#6c6c6c]"/>
         </div>
