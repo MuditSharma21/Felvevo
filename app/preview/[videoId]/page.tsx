@@ -6,11 +6,12 @@ import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query
 export default async function({
     params
 }: {
-    params: {
+    params: Promise<{
         videoId: string
-    }
+        workspaceId: string
+    }>
 }) {
-    const { videoId } = await params;
+    const { videoId, workspaceId } = await params;
     const query = new QueryClient()
 
     await query.prefetchQuery({
@@ -30,7 +31,7 @@ export default async function({
 
     return (
         <HydrationBoundary state={dehydrate(query)}>
-            <VideoPreview videoId={videoId} />
+            <VideoPreview videoId={videoId} workspaceId={workspaceId}/>
         </HydrationBoundary>
     )
 }

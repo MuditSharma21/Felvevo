@@ -9,7 +9,7 @@ export default async function ({
     children, params
 }: {
     children: React.ReactNode;
-    params: { workspaceId: string }
+    params: Promise<{ workspaceId: string }>
 }) {
     const { workspaceId } = await params;
     const auth = await onAuthenticateUser()

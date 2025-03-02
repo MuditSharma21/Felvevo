@@ -4,9 +4,9 @@ import { redirect } from "next/navigation";
 export default async function({
     params
 }: {
-    params: {
+    params: Promise<{
         inviteId: string
-    }
+    }>
 }) {
     const { inviteId } = await params;  
     const invite = await acceptInvite(inviteId)

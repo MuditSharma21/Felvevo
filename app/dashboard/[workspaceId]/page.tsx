@@ -8,9 +8,9 @@ import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query
 export default async function({
     params
 }: {
-    params: {
+    params: Promise<{
         workspaceId: string
-    }
+    }>
 }) {
     const { workspaceId } = await params;
     const query = new QueryClient()

@@ -7,10 +7,10 @@ import React from 'react'
 export default async function({
     params
 }: {
-    params: {
+    params: Promise<{
         folderId: string
         workspaceId: string
-    }
+    }>
 }) {
     const { workspaceId, folderId } = await params;
     const query = new QueryClient()
