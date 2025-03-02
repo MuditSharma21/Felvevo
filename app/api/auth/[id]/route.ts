@@ -2,10 +2,7 @@ import { db } from "@/lib/prisma";
 import { clerkClient } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(
-    req: NextRequest, 
-    { params }:  { params: { id: string } }
-) {
+export async function GET(req: NextRequest, { params }:  { params: { id: string } }) {
     try {
         // console.log('Endpoint hit✅');
         const { id } = await params
