@@ -180,7 +180,7 @@ export const Sidebar = ({
     return (
         <div>
             <InfoBar activeWorkspaceId={activeWorkspaceId}/>
-            <div className="md:hidden fixed my-4">
+            <div className="md:hidden fixed my-4 z-50">
                 <Sheet>
                     <SheetTrigger
                         className="ml-2"
