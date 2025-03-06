@@ -130,7 +130,7 @@ export const Sidebar = ({
         <Separator className="w-4/5"/>
         <p className="w-full text-[#9D9D9D] font-bold mt-4">Workspaces</p>
         {
-            workspace.workspace.length === 1 && workspace.members.length === 0 && <div className="w-full mt-[-10px]">
+            workspace?.workspace?.length === 1 && workspace?.members?.length === 0 && <div className="w-full mt-[-10px]">
                 <p className="text-[#3c3c3c] font-medium text-sm">
                     {workspace.subscription?.plan === 'FREE' ? 'Upgrade to create workspaces' : 'No workspaces'}   
                 </p>
