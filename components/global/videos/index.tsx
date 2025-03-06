@@ -22,7 +22,6 @@ export const Videos = ({
     )
     
     const { status: videosStatus, data: videos } = videoData as VideosProps
-    console.log(videos);
     
     
     return (

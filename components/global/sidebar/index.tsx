@@ -49,7 +49,7 @@ export const Sidebar = ({
         router.push(`/dashboard/${value}`)
     }
 
-    const currentWorkspace = workspace.workspace.find((s) => s.id == activeWorkspaceId)
+    const currentWorkspace = workspace?.workspace?.find((s) => s?.id == activeWorkspaceId)
 
     useEffect(() => {
         if (isFetched && workspace) {
@@ -86,7 +86,7 @@ export const Sidebar = ({
                                 {workspace.name}
                                 </SelectItem>
                         ))}
-                        {workspace.members.length > 0 && workspace.members.map(
+                        {workspace?.members?.length > 0 && workspace.members.map(
                             (workspace) => workspace.Workspace && <SelectItem key={workspace.Workspace.id} value={workspace.Workspace.id}>
                                 {workspace.Workspace.name}
                             </SelectItem>
@@ -138,7 +138,7 @@ export const Sidebar = ({
         }
         <nav className="w-full">
             <ul className="h-[150px] overflow-auto overflow-x-hidden fade-layer">
-                {workspace.workspace.length > 0 && workspace.workspace.map((item) => 
+                {workspace?.workspace?.length > 0 && workspace.workspace.map((item) => 
                 item.type !== 'PERSONAL' && (
                     <SideBarItem 
                         href={`/dashboard/${item.id}`}
@@ -151,8 +151,9 @@ export const Sidebar = ({
                         </WorkspacePlaceholder>}
                     />))}
                 {
-                    workspace.members.length > 0 && workspace.members.map((item) => (
-                        <SideBarItem 
+                    workspace?.members?.length > 0 && workspace.members.map((item) => {
+                        if (!item || !item.Workspace) return null
+                        return (<SideBarItem 
                             href={`/dashboard/${item.Workspace.id}`}
                             selected={pathname === `/dashboard/${item.Workspace.id}`}
                             title={item.Workspace.name}
@@ -161,8 +162,8 @@ export const Sidebar = ({
                             icon={<WorkspacePlaceholder>
                                 {item.Workspace.name.charAt(0)}
                             </WorkspacePlaceholder>}
-                        />
-                    ))
+                        />)
+                    })
                 }
             </ul>
         </nav>
