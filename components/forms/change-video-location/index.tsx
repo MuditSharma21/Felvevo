@@ -21,7 +21,7 @@ export const ChangeVideoLocation = ({
         workspaces,
         isFetching,
         isFolders
-    } = useMoveVideos(videoId, currentWorkspace!)
+    } = useMoveVideos(videoId, currentWorkspace || '')
 
     const folder  = folders?.find((f) => f?.id === currentFolder) || null
     const workspace  = workspaces?.find((w) => w?.id === currentWorkspace) || null

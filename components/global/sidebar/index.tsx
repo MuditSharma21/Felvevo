@@ -78,7 +78,7 @@ export const Sidebar = ({
                             Workspaces
                         </SelectLabel>
                         <Separator />
-                        {workspace.workspace.map((workspace) => (
+                        {workspace?.workspace?.map((workspace) => (
                                 <SelectItem
                                     key={workspace.id}
                                     value={workspace.id}
