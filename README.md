@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Links to other connected repositories [Backend](https://github.com/MuditSharma21/felvevo-backend) & [Desktop App](https://github.com/MuditSharma21/felvevo-desktop)
+
 ## Getting Started
 
 First, run the development server:
