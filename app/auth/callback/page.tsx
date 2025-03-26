@@ -1,3 +1,5 @@
+// app/auth/callback/page.tsx
+
 import { onAuthenticateUser } from "@/actions/user";
 import { redirect } from "next/navigation";
 
