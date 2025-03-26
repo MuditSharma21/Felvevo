@@ -36,7 +36,7 @@ export const AiTools = ({
                             <div className="flex flex-col">
                                 <h3 className="textmdg">Summary</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Generate a description for your video using AI.
+                                    Generates a description for your video using AI.
                                 </p>
                             </div>
                         </div>
@@ -45,21 +45,9 @@ export const AiTools = ({
                                 <FileTextIcon color="#005F4C" />
                             </div>
                             <div className="flex flex-col">
-                                <h3 className="textmdg">Summary</h3>
+                                <h3 className="textmdg">Transcript</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Generate a description for your video using AI.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex gap-2 items-start">
-                            <div className="p-2 rounded-full border-[#2d2d2d] border-[2px] bg-[#2b2b2b] ">
-                                <Bot color="#005F4C" />
-                            </div>
-                            <div className="flex flex-col">
-                                <h3 className="text-md">AI Agent</h3>
-                                <p className="text-muted-foreground text-sm">
-                                    Viewers can ask questions on your video and our ai agent will
-                                    respond.
+                                    Generates a transcript for your video using AI.
                                 </p>
                             </div>
                         </div>
