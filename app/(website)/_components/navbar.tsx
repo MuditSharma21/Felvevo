@@ -1,3 +1,4 @@
+import { Modal } from '@/components/modal'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,7 +9,6 @@ export const LandingPageNavbar = () => {
   return (
     <div className='flex w-full justify-between items-center'>
         <div className='text-3xl font-semibold flex items-center gap-x-3'>
-            {/* <Menu className='w-8 h-8'/> */}
             <Image 
                 alt='logo'
                 src={'/logo.png'}
@@ -17,21 +17,24 @@ export const LandingPageNavbar = () => {
             />
             Felvevő
         </div>
-        {/* <div className='hidden gap-x-10 items-center lg:flex'>
-            <Link
-                href={'/'}
-                className='bg-[#005F4C] py-2 px-5 font-semibold text-llg rounded-full hover:bg-[#005F4C]/80'
-            >
-                Home
-            </Link>
-            <Link href={'/'}>Pricing</Link>
-            <Link href={'/'}>Contact</Link>
-        </div> */}
-            <Link href={'/auth/signin'}>
-                <Button className='text-base bg-gradient-to-r from-emerald-600 to-cyan-600 text-white hover:text-black flex gap-x-2'>
+            <Modal
+                title=''
+                description=''
+                trigger={<Button className='text-base bg-gradient-to-r from-emerald-600 to-cyan-600 text-white hover:text-black flex gap-x-2'>
                     Login
-                </Button>
-            </Link>
-    </div>
+                </Button>}
+            >
+                <div className='flex flex-col'>
+                    <p className='font-semibold'>Use the dummy credentials below for signing in - </p>
+                    <p className='text-sm'>Username - dummyuser_123</p>
+                    <p className='text-sm'>Password - dummy_user_123</p>
+                </div>
+                    <Link href={'/auth/signin'}>
+                        <Button>
+                            Login
+                        </Button>
+                    </Link>
+            </Modal>
+        </div>
   )
 }

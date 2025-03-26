@@ -6,6 +6,7 @@ import { UserButton } from "@clerk/nextjs"
 import { Search, UploadIcon } from "lucide-react"
 import { ItemSearch } from "../search-items"
 import { VideoUpload } from "../video-upload"
+import { RecordVideo } from "../record-video"
 
 export const InfoBar = ({
     activeWorkspaceId, folderId
@@ -51,12 +52,18 @@ export const InfoBar = ({
                     >
                         <VideoUpload workspaceId={activeWorkspaceId} folderId={folderId}/>
                     </Modal>
-                <Button 
-                    className="bg-[#9D9D9D] flex items-center gap-2"
+                <Modal
+                    title=""
+                    description=""
+                    trigger={<Button 
+                        className="bg-[#9D9D9D] flex items-center gap-2"
+                    >
+                        <VideoRecorderIcon />
+                        <span className="sm:flex hidden items-center gap-2">Record</span>
+                    </Button>}
                 >
-                    <VideoRecorderIcon />
-                    <span className="sm:flex hidden items-center gap-2">Record</span>
-                </Button>
+                    <RecordVideo />
+                </Modal>
                 {/* TODO: Implement Record functionality */}
                 <UserButton />
             </div>
